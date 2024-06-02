@@ -11,7 +11,14 @@ body{
     align-items: center;
     justify-content: center;
     background-color: black;
+    overflow: hidden;
 }
+
+.coracao-claro{
+    filter: hue-rotate(-9deg);
+    filter: brightness(1.6);
+}
+
 .greetings{
     font-size: 6rem;
     font-weight: 900;
@@ -45,13 +52,26 @@ body{
 .description{
     font-size: 1.5rem;
     margin-bottom: 20px;
+    animation: 0.2s to top ease-in;
+}
+
+
+button{
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: #39c6d6dc;
 }
 
 .button a{
+    padding: 15px;
     text-decoration: none;
-    font-size: 1rem;
-    color: #111;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    color: #ffffff;
 }
+
 
 @media screen and (max-width:574px){
     .greetings{
@@ -66,5 +86,31 @@ body{
     
     .button a{
         font-size: .5rem;
+    }
+}
+
+@media screen and (max-width:375px){
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    .greetings{
+        margin-top: -50px;
+        margin-bottom: 60px;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+    }
+    .description{
+        text-align: center;
+        position: absolute;
+        width: 300px;
+        left: 40px;
+        font-size: 14px;
+    }
+    
+    .button a{
+        font-size: .9rem;
     }
 }
